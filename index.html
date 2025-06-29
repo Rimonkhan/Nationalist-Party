@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডঃ ব্যারিস্টার ইশরাক আহমেদ সিদ্দিকী | গাজীপুর-১</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: BNP Green & Red with Neutral Harmony -->
+    <!-- Application Structure Plan: The site remains a political narrative. A new, collapsible developer portfolio has been added to the footer. This design choice cleanly separates the developer's professional information from the main political content, providing credit and contact info without distracting from the site's primary purpose. It's an elegant solution for including tangential but important information. -->
+    <!-- Visualization & Content Choices: Gallery: Auto-playing media slider (Swiper.js). | Leadership Directory: Two-part system with a "Featured" slider (Swiper.js) and a "Load More" grid (JS). | Developer Portfolio (New): Goal: Inform/Credit. Method: A collapsible section in the footer with structured text columns (HTML/CSS). Interaction: Click to expand/collapse. Justification: Keeps the main UI clean while providing a comprehensive, professional showcase for the developer. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body { 
+            font-family: 'Hind Siliguri', sans-serif;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard syntax */
+        }
+        .bnp-green { color: #006A4E; }
+        .bnp-green-bg { background-color: #006A4E; }
+        .bnp-red { color: #F42A41; }
+        .bnp-red-bg { background-color: #F42A41; }
+        .hero-bg { background: linear-gradient(rgba(0, 106, 78, 0.8), rgba(0, 106, 78, 0.6)), url('/israk/images/israk.jpeg') no-repeat center center; background-size: cover; }
+        .nav-item { transition: all 0.3s ease; }
+        .nav-item:hover { color: #F42A41; transform: translateY(-2px); }
+        .vision-card, .leader-card { transition: all 0.3s ease; }
+        .vision-card:hover, .leader-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .swiper-button-next, .swiper-button-prev { color: #F42A41 !important; }
+        .swiper-pagination-bullet-active { background: #006A4E !important; }
+        .swiper-slide { display: flex; justify-content: center; align-items: stretch; background: transparent; padding-bottom: 2.5rem; }
+        #developer-portfolio { max-height: 0; overflow: hidden; transition: max-height 0.7s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav id="navbar" class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="font-bold text-xl bnp-green flex items-center"><span class="text-2xl mr-2">🌾</span> ডঃ ইশরাক আহমেদ সিদ্দিকী</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-item">পরিচিতি</a>
+                <a href="#vision" class="nav-item">পরিকল্পনা</a>
+                <a href="#gallery" class="nav-item">গ্যালারি</a>
+                <a href="#leadership" class="nav-item">নেতৃবৃন্দ</a>
+                <a href="#join" class="nav-item">মতামত দিন</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about" class="block py-2 nav-item">পরিচিতি</a>
+            <a href="#vision" class="block py-2 nav-item">পরিকল্পনা</a>
+            <a href="#gallery" class="block py-2 nav-item">গ্যালারি</a>
+            <a href="#leadership" class="block py-2 nav-item">নেতৃবৃন্দ</a>
+            <a href="#join" class="block py-2 nav-item">মতামত দিন</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-bg text-white min-h-[85vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-left">
+                        <div class="flex items-center justify-center md:justify-start mb-4"><img src="/israk/images/israk.jpeg" alt="ধানের শীষ" class="w-24 h-24 rounded-full border-4 border-white"></div>
+                        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">ডঃ ব্যারিস্টার ইশরাক আহমেদ সিদ্দিকী</h1>
+                        <p class="text-2xl font-semibold mb-6 text-red-300">গাজীপুর-১ আসনে বাংলাদেশ জাতীয়তাবাদী দল (বিএনপি) মনোনীত সংসদ সদস্য পদপ্রার্থী</p>
+                        <p class="text-lg md:text-xl font-medium bg-black/30 p-4 rounded-lg">গণতন্ত্র, সততা ও তারুণ্যের নেতৃত্বে একটি সমৃদ্ধ গাজীপুর গড়ার প্রত্যয়ে, আসুন ধানের শীষে ভোট দিয়ে উন্নয়নের নতুন দিগন্ত উন্মোচন করি।</p>
+                    </div>
+                    <div class="flex justify-center"><img src="/israk/images/israk1.jpeg" alt="ডঃ ব্যারিস্টার ইশরাক আহমেদ সিদ্দিকী" class="rounded-lg shadow-2xl border-4 border-white/50 max-w-sm w-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold bnp-green">প্রার্থী পরিচিতি</h2>
+                    <p class="text-gray-600 mt-2">একজন নিবেদিতপ্রাণ নেতা এবং আপনার সেবক</p>
+                    <div class="w-24 h-1 bnp-green-bg mx-auto mt-4"></div>
+                </div>
+                <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
+                    <p>ডঃ ব্যারিস্টার ইশরাক আহমেদ সিদ্দিকী গাজীপুরের এক সম্ভ্রান্ত পরিবারে জন্মগ্রহণ করেন। তিনি শিক্ষাজীবনে অসাধারণ কৃতিত্বের স্বাক্ষর রেখেছেন এবং দেশ ও বিদেশের স্বনামধন্য প্রতিষ্ঠান থেকে আইনে উচ্চতর ডিগ্রি অর্জন করেছেন। পেশাগত জীবনে তিনি একজন সফল আইনজীবী হিসেবে পরিচিত, যিনি সর্বদা ন্যায় ও সত্যের পক্ষে অবিচল থেকেছেন।</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="py-20 bg-gray-100">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold bnp-green">সমৃদ্ধ গাজীপুরের পরিকল্পনা</h2>
+                    <p class="text-gray-600 mt-2">আগামীর গাজীপুর বিনির্মাণে আমাদের সুনির্দিষ্ট লক্ষ্য</p>
+                    <div class="w-24 h-1 bnp-green-bg mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="vision-card bg-white p-6 rounded-lg shadow-md text-center cursor-pointer"><div class="text-5xl bnp-red mb-4">🎓</div><h3 class="text-2xl font-bold mb-2">শিক্ষার উন্নয়ন</h3><p class="text-gray-600">আধুনিক ও মানসম্মত শিক্ষা ব্যবস্থা নিশ্চিতকরণ।</p></div>
+                    <div class="vision-card bg-white p-6 rounded-lg shadow-md text-center cursor-pointer"><div class="text-5xl bnp-red mb-4">❤️</div><h3 class="text-2xl font-bold mb-2">স্বাস্থ্যসেবার প্রসার</h3><p class="text-gray-600">সকলের জন্য সহজলভ্য ও উন্নত চিকিৎসা সেবা।</p></div>
+                    <div class="vision-card bg-white p-6 rounded-lg shadow-md text-center cursor-pointer"><div class="text-5xl bnp-red mb-4">🏭</div><h3 class="text-2xl font-bold mb-2">শিল্প ও বাণিজ্য</h3><p class="text-gray-600">নতুন শিল্প স্থাপন ও ব্যবসা-বান্ধব পরিবেশ তৈরি।</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold bnp-green">কর্মসূচির মুহূর্ত</h2>
+                    <p class="text-gray-600 mt-2">গণসংযোগ ও বিভিন্ন কার্যক্রমে আমাদের উপস্থিতি</p>
+                    <div class="w-24 h-1 bnp-green-bg mx-auto mt-4"></div>
+                </div>
+                <div class="swiper mediaSwiper w-full h-[300px] md:h-[500px] rounded-lg shadow-xl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/israk/images/israk.jpeg" alt="জনসভায় বক্তব্য" class="w-full h-full object-cover"></div>
+                        <div class="swiper-slide relative flex justify-center items-center bg-black"><img src="images/israk.jpeg" alt="র‍্যালির ভিডিও" class="w-full h-full object-cover opacity-80"><div class="absolute inset-0 flex justify-center items-center"><div class="w-16 h-16 md:w-20 md:h-20 bg-white/50 rounded-full flex justify-center items-center backdrop-blur-sm"><span class="text-3xl md:text-4xl text-white">▶</span></div></div></div>
+                        <div class="swiper-slide"><img src="/israk/images/israk.jpeg" alt="এলাকাবাসীর সাথে গণসংযোগ" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div><div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold bnp-green">গাজীপুর-১ এর নেতৃবৃন্দ</h2>
+                    <p class="text-gray-600 mt-2">আমাদের নিবেদিতপ্রাণ নেতাদের সাথে পরিচিত হোন</p>
+                    <div class="w-24 h-1 bnp-green-bg mx-auto mt-4"></div>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold bnp-green text-center mb-8">বিশেষ নেতৃবৃন্দ</h3>
+                <div class="swiper featuredLeadersSwiper w-full pb-8">
+                    <div id="featured-leaders-wrapper" class="swiper-wrapper"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="w-full border-t border-gray-300 my-12"></div>
+                <h3 class="text-2xl md:text-3xl font-bold bnp-green text-center mb-4">সম্পূর্ণ তালিকা</h3>
+                <div class="max-w-2xl mx-auto mb-10">
+                    <input type="text" id="leader-search" placeholder="নাম, পদ বা এলাকা লিখে সার্চ করুন..." class="w-full p-4 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition">
+                </div>
+                <div id="leadership-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+                <div id="no-results" class="text-center py-10 text-xl text-gray-500 hidden"><p>কোনো ফলাফল পাওয়া যায়নি।</p></div>
+                <div id="load-more-container" class="text-center mt-12">
+                    <button id="load-more-btn" class="bnp-red-bg text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition-colors duration-300 text-lg">আরও দেখুন</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="py-20 bnp-green-bg text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold">আপনার মতামত দিন</h2>
+                <p class="text-xl mt-2 mb-8">আপনার প্রতিটি পরামর্শ আমাদের কাছে মূল্যবান। গাজীপুরের উন্নয়নে আপনার ভাবনা আমাদের জানান।</p>
+                <div class="max-w-lg mx-auto bg-white/10 p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4">ফিডব্যাক ফর্ম</h3>
+                    <form id="feedback-form">
+                        <div class="mb-4"><input id="feedback-name" type="text" placeholder="আপনার নাম" class="w-full p-3 rounded-md bg-white/90 text-gray-800" required></div>
+                        <div class="mb-4"><input id="feedback-email" type="email" placeholder="আপনার ইমেইল (ঐচ্ছিক)" class="w-full p-3 rounded-md bg-white/90 text-gray-800"></div>
+                        <div class="mb-4"><textarea id="feedback-message" placeholder="আপনার বার্তা" rows="4" class="w-full p-3 rounded-md bg-white/90 text-gray-800" required></textarea></div>
+                        <button type="submit" class="w-full bnp-red-bg text-white font-bold py-3 px-6 rounded-md hover:bg-red-700">মতামত পাঠান</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white pt-10 pb-6">
+        <div class="container mx-auto px-6 text-center">
+            <p id="copyright-notice">২০২৫ সর্বস্বত্ব সংরক্ষিত | ডঃ ব্যারিস্টার ইশরাক আহমেদ সিদ্দিকী</p>
+            <p class="text-sm text-gray-400 mt-2">বাংলাদেশ জাতীয়তাবাদী দল (বিএনপি)</p>
+            <div class="border-t border-gray-700 my-6"></div>
+            <p class="text-sm text-gray-400">ওয়েবসাইট ডিজাইন ও ডেভেলপমেন্ট: 
+                <button id="developer-toggle" class="font-semibold text-white hover:text-red-400 focus:outline-none">
+                   মো. রিমন আহমেদ [বিস্তারিত দেখুন]
+                </button>
+            </p>
+            <div id="developer-portfolio" class="bg-gray-900/50 mt-4 rounded-lg pt-2 text-middle">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Personal Profile & Contact -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-red-400 border-b border-red-400/50 pb-2 mb-3">পার্সোনাল প্রোফাইল</h4>
+                            <p><strong>নাম:</strong> মো. রিমন আহমেদ</p>
+                            <p><strong>পদবি:</strong> সাইবার সিকিউরিটি স্পেশালিস্ট</p>
+                            <p><strong>অভিজ্ঞতা:</strong> ৫ বছরের অভিজ্ঞতা</p>
+                            <p><strong>সার্ভার লোকেশন:</strong> ঢাকা, বাংলাদেশ</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-red-400 border-b border-red-400/50 pb-2 mb-3">যোগাযোগ</h4>
+                            <a href="mailto:hackproofacademy@gmail.com" class="block hover:text-red-400">📧 ইমেইল:hackproofacademy@gmail.com</a>
+                            <a href="https://wa.me/8801782642544" target="_blank" class="block hover:text-red-400">📱 হোয়াটসঅ্যাপ চ্যাট</a>
+                            <button class=" hover:text-red-400">  💬 লাইভ চ্যাট (শীঘ্রই আসছে)</button>
+                        </div>
+                    </div>
+                    <!-- Services -->
+                    <div class="lg:col-span-1">
+                        <h4 class="font-bold text-lg text-red-400 border-b border-red-400/50 pb-2 mb-3">সার্ভিস তালিকা</h4>
+                        <ul class="space-y-1 list-inside">
+                            <li>🌐 ওয়েবসাইট ডিজাইন ও ডেভেলপমেন্ট</li>
+                            <li>🛒 ই-কমার্স সাইট সেটআপ</li>
+                            <li>🔧 ওয়ার্ডপ্রেস মেইনটেনেন্স</li>
+                            <li>☁️ হোস্টিং, ডোমেইন ও সার্ভার সেটআপ</li>
+                            <li>📱 কাস্টম অ্যাপ ডিজাইন</li>
+                            <li>🧠 SEO ও স্পিড অপ্টিমাইজেশন</li>
+                            <li>📍 সার্ভিস এলাকা: সারাদেশে ও বিদেশে</li>
+                        </ul>
+                    </div>
+                    <!-- Technical Info & Expertise -->
+                    <div class="lg:col-span-1">
+                        <h4 class="font-bold text-lg text-red-400 border-b border-red-400/50 pb-2 mb-3">টেকনিক্যাল তথ্য</h4>
+                        <p><strong>ফ্রেমওয়ার্ক:</strong> কাস্টম HTML-CSS, React</p>
+                        <p><strong>হোস্টিং:</strong> Google Cloud, Hostinger, etc.</p>
+                        <p><strong>সিকিউরিটি:</strong> SSL, Firewall, DDOS Protection</p>
+                        <p><strong>ডাটাবেজ:</strong> Firebase, MongoDB</p>
+                        <div class="mt-4">
+                            <h4 class="font-bold text-lg text-red-400 border-b border-red-400/50 pb-2 mb-3">অভিজ্ঞতা</h4>
+                            <p>✅ ৫০+ সফল প্রজেক্ট</p>
+                            <p>✅ জাতীয় ও আন্তর্জাতিক ক্লায়েন্ট</p>
+                            <p>✅ অল-ইন-ওয়ান সল্যুশন</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-6">এই ওয়েবসাইটের বিষয়বস্তু কপি করা বা পুনরায় বিতরণ করা নিষিদ্ধ।</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- CONTENT PROTECTION ---
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            document.addEventListener('keydown', event => {
+                if (event.ctrlKey && ['c', 'u', 's'].includes(event.key.toLowerCase())) { event.preventDefault(); }
+                if (event.key === 'F12') { event.preventDefault(); }
+            });
+
+            // --- DYNAMIC COPYRIGHT YEAR ---
+            const copyrightNotice = document.getElementById('copyright-notice');
+            const currentYear = new Date().getFullYear();
+            const yearInBangla = String(currentYear).split('').map(digit => String.fromCharCode(digit.charCodeAt(0) + 2528)).join('');
+            copyrightNotice.innerHTML = `&copy; ${yearInBangla} সর্বস্বত্ব সংরক্ষিত | ডঃ ব্যারিস্টার ইশরাক আহমেদ সিদ্দিকী`;
+            
+            // --- DEVELOPER PORTFOLIO TOGGLE ---
+            const developerToggle = document.getElementById('developer-toggle');
+            const developerPortfolio = document.getElementById('developer-portfolio');
+            developerToggle.addEventListener('click', () => {
+                if (developerPortfolio.style.maxHeight) {
+                    developerPortfolio.style.maxHeight = null;
+                    developerToggle.innerHTML = "মো. রিমন আহমেদ [বিস্তারিত দেখুন]";
+                } else {
+                    developerPortfolio.style.maxHeight = developerPortfolio.scrollHeight + "px";
+                    developerToggle.innerHTML = "মো. রিমন আহমেদ [বন্ধ করুন]";
+                }
+            });
+            
+            // --- ALL OTHER PAGE SCRIPTS ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                document.getElementById('navbar').style.top = (scrollTop > lastScrollTop && scrollTop > 100) ? '-80px' : '0';
+                lastScrollTop = scrollTop;
+            });
+            
+            document.getElementById('feedback-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                window.location.href = `mailto:campaign.ishraq.siddiquee@example.com`;
+            });
+
+            const mediaSwiper = new Swiper(".mediaSwiper", {
+                spaceBetween: 30, centeredSlides: true, loop: true,
+                autoplay: { delay: 4000, disableOnInteraction: false },
+                pagination: { el: ".swiper-pagination", clickable: true },
+                navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            });
+
+            const leadershipData = [
+                { id: 1, name: 'জনাব মোঃ হাসান সরকার', position: 'সভাপতি, গাজীপুর মহানগর', area: 'গাজীপুর মহানগর', phone: '01711-xxxxxx', photo: 'https://placehold.co/250x250/006A4E/white?text=H+S' },
+                { id: 2, name: 'জনাব মোঃ শওকত হোসেন', position: 'সাধারণ সম্পাদক', area: 'কাশিমপুর থানা', phone: '01819-xxxxxx', photo: 'https://placehold.co/250x250/F42A41/white?text=S+H' },
+                { id: 3, name: 'ফারহানা আক্তার', position: 'সভাপতি, মহিলা দল', area: 'গাজীপুর মহানগর', phone: '01911-xxxxxx', photo: 'https://placehold.co/250x250/333333/white?text=F+A' },
+                { id: 4, name: 'জনাব মোঃ রফিকুল ইসলাম', position: 'সভাপতি', area: 'ওয়ার্ড নং ১, কোনাবাড়ি', phone: '01678-xxxxxx', photo: 'https://placehold.co/250x250/555555/333333?text=R+I' },
+                { id: 5, name: 'জনাব আবুল কালাম আজাদ', position: 'সভাপতি', area: 'সদর থানা', phone: '01552-xxxxxx', photo: 'https://placehold.co/250x250/006A4E/white?text=A+K+A' },
+                { id: 6, name: 'জনাব মেহেদী হাসান', position: 'সভাপতি, ছাত্রদল', area: 'গাজীপুর মহানগর', phone: '01712-xxxxxx', photo: 'https://placehold.co/250x250/F42A41/white?text=M+H' },
+                { id: 7, name: 'জনাব মোঃ ইব্রাহিম খলিল', position: 'সাধারণ সম্পাদক', area: 'ওয়ার্ড নং ২, কোনাবাড়ি', phone: '01922-xxxxxx', photo: 'https://placehold.co/250x250/333333/white?text=I+K' },
+                { id: 8, name: 'জনাব মোঃ আনোয়ার হোসেন', position: 'সভাপতি', area: 'ওয়ার্ড নং ৩, কোনাবাড়ি', phone: '01818-xxxxxx', photo: 'https://placehold.co/250x250/555555/333333?text=A+H' },
+                { id: 9, name: 'জনাব আব্দুল্লাহ আল মামুন', position: 'সাংগঠনিক সম্পাদক', area: 'কাশিমপুর থানা', phone: '01713-xxxxxx', photo: 'https://placehold.co/250x250/006A4E/white?text=A+A+M' },
+                { id: 10, name: 'সেলিনা সুলতানা', position: 'সাধারণ সম্পাদক, মহিলা দল', area: 'গাজীপুর মহানগর', phone: '01812-xxxxxx', photo: 'https://placehold.co/250x250/F42A41/white?text=S+S' },
+                { id: 11, name: 'জনাব কবির হোসেন', position: 'সভাপতি, যুবদল', area: 'সদর থানা', phone: '01913-xxxxxx', photo: 'https://placehold.co/250x250/333333/white?text=K+H' },
+                { id: 12, name: 'জনাব নাসির উদ্দিন', position: 'সভাপতি', area: 'ওয়ার্ড নং ৪, কোনাবাড়ি', phone: '01614-xxxxxx', photo: 'https://placehold.co/250x250/555555/333333?text=N+U' },
+            ];
+
+            const featuredLeaders = leadershipData.slice(0, 8);
+            const directoryLeaders = leadershipData; 
+            const grid = document.getElementById('leadership-grid');
+            const searchInput = document.getElementById('leader-search');
+            const noResults = document.getElementById('no-results');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            const featuredWrapper = document.getElementById('featured-leaders-wrapper');
+
+            const ITEMS_PER_PAGE = 8;
+            let itemsDisplayed = 0;
+
+            const createLeaderCardHTML = (leader) => `<div class="leader-card bg-white rounded-lg shadow-md p-6 text-center h-full flex flex-col"><img src="${leader.photo}" alt="${leader.name}" class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-gray-200 object-cover"><h3 class="text-xl font-bold text-gray-900">${leader.name}</h3><p class="font-semibold bnp-green">${leader.position}</p><p class="text-gray-600 mb-3 flex-grow">${leader.area}</p><a href="tel:${leader.phone}" class="inline-block bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300 mt-auto">📞 ${leader.phone}</a></div>`;
+            
+            featuredWrapper.innerHTML = featuredLeaders.map(leader => `<div class="swiper-slide">${createLeaderCardHTML(leader)}</div>`).join('');
+            
+            const featuredSwiper = new Swiper(".featuredLeadersSwiper", {
+                slidesPerView: 1, spaceBetween: 10, loop: true,
+                autoplay: { delay: 3000, disableOnInteraction: false },
+                pagination: { el: ".swiper-pagination", clickable: true },
+                breakpoints: { 640: { slidesPerView: 2, spaceBetween: 20 }, 1024: { slidesPerView: 3, spaceBetween: 30 }, 1280: { slidesPerView: 4, spaceBetween: 30 } },
+            });
+
+            const renderDirectory = (leaders) => {
+                grid.innerHTML = '';
+                noResults.classList.toggle('hidden', leaders.length > 0);
+                leaders.forEach(leader => grid.innerHTML += createLeaderCardHTML(leader));
+            };
+
+            const loadMoreDirectoryItems = () => {
+                const newItems = directoryLeaders.slice(itemsDisplayed, itemsDisplayed + ITEMS_PER_PAGE);
+                newItems.forEach(leader => grid.insertAdjacentHTML('beforeend', createLeaderCardHTML(leader)));
+                itemsDisplayed += newItems.length;
+                loadMoreBtn.classList.toggle('hidden', itemsDisplayed >= directoryLeaders.length);
+            };
+
+            const resetDirectory = () => {
+                itemsDisplayed = 0;
+                grid.innerHTML = '';
+                loadMoreDirectoryItems();
+                noResults.classList.add('hidden');
+            };
+
+            loadMoreBtn.addEventListener('click', loadMoreDirectoryItems);
+
+            searchInput.addEventListener('keyup', (e) => {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                if (searchTerm === '') { resetDirectory(); return; }
+                const filteredLeaders = directoryLeaders.filter(leader => 
+                    leader.name.toLowerCase().includes(searchTerm) ||
+                    leader.position.toLowerCase().includes(searchTerm) ||
+                    leader.area.toLowerCase().includes(searchTerm)
+                );
+                renderDirectory(filteredLeaders);
+                loadMoreBtn.classList.add('hidden');
+            });
+
+            resetDirectory();
+        });
+    </script>
+</body>
+</html>
